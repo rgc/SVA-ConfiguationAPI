@@ -1,0 +1,42 @@
+{
+    "hosts": [
+       {
+        "host": "edge.example.com",
+        "host-metadata":
+        {
+                "generic-metadata-type": "MI.SourceMetadata",
+                "generic-metadata-value": {
+                  "sources": [
+                    {
+                      "endpoint": ["origin.example.com"],
+                      "protocol": "http/1.1"
+                    }
+                  ]
+                }
+        },
+        "paths": [
+              {
+                "path-pattern": {
+                  "pattern": "/videos/trailers/*"
+                },
+                "path-metadata": {
+                        "generic-metadata-type": "MI.TimeWindowACL",
+                        "generic-metadata-value": {
+                          "times": [
+                            {
+                             "windows": [
+                              {
+                                "start": "1213948800",
+                                "end": "1478047392"
+                              }
+                            ],
+                            "action": "allow"
+                            }
+                          ]
+                        }
+                      }
+                }
+            ]
+        }
+    ]
+  }
