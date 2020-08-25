@@ -1,0 +1,40 @@
+{
+  "hosts": [
+    {
+      "host": "edge.example.com",
+      "host-metadata":
+      {
+        "generic-metadata-type": "MI.SourceMetadata",
+        "generic-metadata-value": {
+          "sources": [
+            {
+              "endpoint": ["origin.example.com"],
+              "protocol": "http/1.1",
+              "authentication": {
+                "generic-metadata-type": "MI.Auth",
+                "generic-metadata-value":
+                {
+                  "auth-type": "aws",
+                  "auth-value":
+                    {
+                      "aws-version": "4",
+                      "aws-region-key": "us-east-1",
+                      "aws-service-key": "s3",
+                      "aws-signing-key": "test"
+                    }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "paths": [
+        {
+          "path-pattern": {
+            "pattern": "/videos/trailers/*"
+          }
+        }
+      ]
+    }
+  ]
+}
