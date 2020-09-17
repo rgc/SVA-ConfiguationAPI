@@ -1,0 +1,30 @@
+{
+  "hosts": [
+    {
+      "host": "edge.example.com",
+      "host-metadata":
+      {
+        "generic-metadata-type": "MI.RequestMetadata",
+        "generic-metadata-value": {
+          "headers": [
+                    {
+                      "header-name": "X-Custom-Request-1",
+                      "header-value": "test1"
+                    },
+                    {
+                      "header-name": "X-Custom-Request-2",
+                      "header-value": "test2"
+                    }
+                  ]
+          }
+      },
+      "paths": [
+        {
+          "path-pattern": {
+            "pattern": "/videos/trailers/*"
+          }
+        }
+      ]
+    }
+  ]
+}

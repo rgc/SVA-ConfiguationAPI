@@ -1,0 +1,35 @@
+{
+  "hosts": [
+    {
+      "host": "edge.example.com",
+      "host-metadata":
+      {
+        "generic-metadata-type": "MI.SourceMetadata",
+        "generic-metadata-value": {
+          "sources": [
+            {
+              "endpoint": ["origin1.example.com"],
+              "hostname": ["origin.example.com"],
+              "protocol": "http/1.1",
+              "scheme": "https"
+            },
+            {
+              "trigger": "404",
+              "endpoint": ["origin2.example.com"],
+              "hostname": ["origin.example.com"],
+              "protocol": "http/1.1",
+              "scheme": "https"
+            }
+          ]
+        }
+      },
+      "paths": [
+        {
+          "path-pattern": {
+            "pattern": "/videos/trailers/*"
+          }
+        }
+      ]
+    }
+  ]
+}
